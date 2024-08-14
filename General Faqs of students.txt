@@ -1,9 +1,12 @@
+Modified base on daily scrum...
+
 Q: In real-time do we need to get data by writing queries on databases?
 
 	While working with databases [relational databases, i.e Oracle, SQL Server, Teradata etc.]
 	we need to write SQL coding to bring the data or if the code is already written we need
 	to call it.
 	
+
 	If you work with cube databases (multi-dimensional or tabular), we need to write 
 	MDX or DAX queries to bring the data or if the code is already available, we need to call it.
 	
