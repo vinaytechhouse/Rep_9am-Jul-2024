@@ -1,0 +1,78 @@
+Q: In real-time do we need to get data by writing queries on databases?
+
+	While working with databases [relational databases, i.e Oracle, SQL Server, Teradata etc.]
+	we need to write SQL coding to bring the data or if the code is already written we need
+	to call it.
+	
+	If you work with cube databases (multi-dimensional or tabular), we need to write 
+	MDX or DAX queries to bring the data or if the code is already available, we need to call it.
+	
+
+Q: How much data we can pull from sources?
+	You can pull and place (keep in Power BI Desktop) limited volume in Power BI Desktop
+	[as it is a file, file can't store more volumes). Below 1 GB performs faster, till 10 Gb we can
+	keep and operate with decreased performance.
+
+	What if we have more volumes of data at storages?
+		There is a special mode called "Direct Query / Connect Live" available to bring
+		the structure and perform operations in PBI Desktop.
+	How much volumes of data you worked on?
+	I worked on data sizes from MBs to GBS in Desktop in import mode, 
+	more sizes handled using Direct query mode.
+
+Q: How come you use self joins?
+	In Power Query---Create a duplicate and implement merge
+	In DAX: Using Earlier, Earliest functions
+	
+Q: If we add data in excel, how it reflects in Power BI?
+     You have 100 rows and 5 cols in excel--> Loaded to PBI Desktop
+	You have added 50 more rows and 2 more cols-->Refresh Query at PBI Dektop to bring them.
+	
+	Go to the query->right click(...)-> Refresh [Individual query]
+	Home menu-> Refresh [all tables]
+		
+	Note: It's a full refresh [truncate and load]
+	
+	
+Q: Does Power BI has full load and delta load?
+	Full load: Complete data taking from source without any filters.
+					[The above options for full load only].
+					It is good if we have limited volumes of data.
+					
+	Delta load or incremental load: To take required interval or period data			
+					When we have more volumes at source, you want to retrieve limited 
+					or required data, then we go for incremental load.
+					Table-> right click(...)-> Incremental Refresh
+					
+					
+Q: Drill through practice again...filter clear
+
+Q: Does customer provide bar, line etc. charts as part of requirements?
+
+Q: How to create folders for set of tables?
+	Power Query: Groups
+	Power View: Modeling Area: Display Folder to keep set of fields in a folders
+	
+Q: Power Query Vs. Power Pivot?
+	Power Query: A technology to extract and transform data
+	Power Pivot: A storage, modeling (relationships, calculations) and partial visualization area 
+	
+Q: If column names are different, then do you map?
+	In real-time, we will understand business and accordingly we will map.
+	To match this situation, I explained in the case study 1, did in one table, deptid in another table.
+	
+	
+Q: Can we use one dashboard as template in another area?
+Yes, we can export our current report as a template (File menu->Export-> Template),
+you can pass it your colleagues to generate their own reports (Import_>PBI Template)
+
+
+Q: Can we add data manually?
+	You can create manual tables (home menu-> click on grid icon)
+	
+	You can't perform update, delete, and row add operations in a table in Power BI
+	(or any BI tool / application). DWH, BI, and Analytics applications are non-volatile
+	(no change of data, because already processed data we are taking and we don'table
+	have any authority to work on except bringing it in a proper shape)
+	
+	Note: You can replace and you can delete records during analysis only.
